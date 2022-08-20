@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --main-BG: hsl(217, 54%, 11%);
+  --card-BG: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  background-color: var(--main-BG);
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+  height: calc(100vh - 1px);
+}
+
+/* Start Container */
+.container {
+  background-color: var(--card-BG);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  margin-top: 2rem;
+}
+.container .main-image {
+  position: relative; 
+}
+.container .main-image div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  border-radius: 1rem;
+  background-color: hsl(178, 100%, 50%, 50% );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity ease 0.5s;
+}
+.container .main-image div:hover{
+  opacity: 100%;
+  cursor: pointer;
+}
+.main-image img {
+  max-width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+@media (min-width: 375px) {
+  .container {
+    width: 350px;
+  }
+}
+.container h1 {
+  color: var(--White);
+  margin-bottom: 1rem;
+  font-size: 1.5em;
+}
+.container h1:hover{
+  color: var(--Cyan);
+  cursor: pointer;
+}
+.container p {
+  color: var(--Soft-blue);
+  margin-bottom: 1rem;
+}
+/* Start Time Div */
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+.time .one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.time .two {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .time p {
+  margin-left: 10px;
+  margin-top: 15px;
+}
+.container .time .one p{
+  color: var(--Cyan);
+  font: 400px;
+}
+hr {
+  background-color: var(--line);
+  border-bottom: none;
+  height: 1px;
+  margin-bottom: 1.25rem;
+}
+.seconed-img {
+  display: flex;
+  justify-content: space-around;
+}
+.seconed-img img {
+  width: 60px;
+  border: 2px solid var(--White);
+  border-radius: 50%;
+  margin-left: -40px;
+}
+.seconed-img p {
+  margin-top: 15px;
+  margin-left: -70px;
+}
+.seconed-img span {
+  color: var(--White);
+}
+.seconed-img span:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
